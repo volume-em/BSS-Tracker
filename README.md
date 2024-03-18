@@ -8,11 +8,11 @@ The BSS Tracker is a project tracking tool that connects biological samples and 
 
 Overview of Dashboard and treeview of sample project and it's connected samples: 
 
-![treeview](videos/BSS-tracker-treeview.mp4)
+![treeview](videos/BSS-tracker-treeview.gif)
 
 Overview of the entry fields and an example of a bio-specimen entry:
 
-![example-entry](videos/BSS-tracker-full-lookthrough-plus-entry.mp4)
+![example-entry](videos/BSS-tracker-sample-entry.gif)
 
 
 
