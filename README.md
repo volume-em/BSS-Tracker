@@ -1,5 +1,24 @@
 # BSS Tracker
 
+## Description
+
+The BSS Tracker is a project tracking tool that connects biological samples and specimens to projects and investigators. 
+
+![bss-tracker-set-up](videos/bss-tracker.png)
+
+Overview of Dashboard and treeview of sample project and it's connected samples: 
+
+![treeview](videos/BSS-tracker-treeview.mp4)
+
+Overview of the entry fields and an example of a bio-specimen entry:
+
+![example-entry](videos/BSS-tracker-full-lookthrough-plus-entry.mp4)
+
+
+
+
+
+
 ## Requirements
 
 - A web server (Apache/NGINX)
