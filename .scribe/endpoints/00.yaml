@@ -1,0 +1,1681 @@
+name: Investigators
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/investigators
+    metadata:
+      groupName: Investigators
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List all Investigators'
+      description: 'Retrieve a paginated list of all investigators & the projects they belong to.'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      key:
+        name: key
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_API_KEY}'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      key: '{YOUR_API_KEY}'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: |-
+          {
+              "message": "",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
+              "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
+              "line": 1248,
+              "trace": [
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+                      "line": 45,
+                      "function": "abort",
+                      "class": "Illuminate\\Foundation\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/app/Http/Middleware/RequiresValidApiKey.php",
+                      "line": 21,
+                      "function": "abort"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "App\\Http\\Middleware\\RequiresValidApiKey",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/app/Http/Middleware/DefaultApiHeaders.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "App\\Http\\Middleware\\DefaultApiHeaders",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 159,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 125,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 87,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 805,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 784,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 748,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 737,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 144,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php",
+                      "line": 19,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 99,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 300,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 288,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 91,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 44,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 236,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 163,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 125,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 72,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 50,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 53,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 35,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 211,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Command/Command.php",
+                      "line": 326,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 180,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 1096,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 324,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 175,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 201,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/artisan",
+                      "line": 35,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - key
+      - EDfVakd1ehb665gc48ZP3va
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/investigators/search
+    metadata:
+      groupName: Investigators
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Search Investigators'
+      description: 'Retrieve a paginated list of investigators based on a search term provided.'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      key:
+        name: key
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_API_KEY}'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      term:
+        name: term
+        description: 'Fuzzy term to search on'
+        required: true
+        example: nisi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      key: '{YOUR_API_KEY}'
+      term: nisi
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: |-
+          {
+              "message": "",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
+              "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
+              "line": 1248,
+              "trace": [
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+                      "line": 45,
+                      "function": "abort",
+                      "class": "Illuminate\\Foundation\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/app/Http/Middleware/RequiresValidApiKey.php",
+                      "line": 21,
+                      "function": "abort"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "App\\Http\\Middleware\\RequiresValidApiKey",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/app/Http/Middleware/DefaultApiHeaders.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "App\\Http\\Middleware\\DefaultApiHeaders",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 159,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 125,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 87,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 805,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 784,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 748,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 737,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 144,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php",
+                      "line": 19,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 99,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 300,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 288,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 91,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 44,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 236,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 163,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 125,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 72,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 50,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 53,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 35,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 211,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Command/Command.php",
+                      "line": 326,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 180,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 1096,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 324,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 175,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 201,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/artisan",
+                      "line": 35,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - key
+      - v6dEP86a3kfeZ4V1ahDgc5b
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/investigators
+    metadata:
+      groupName: Investigators
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create an Investigator'
+      description: 'Create a new Investigator.'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      key:
+        name: key
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_API_KEY}'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      key: '{YOUR_API_KEY}'
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: "Investigator's first name"
+        required: true
+        example: Joe
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      middle_initial:
+        name: middle_initial
+        description: "Investigator's middle initial"
+        required: true
+        example: A
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      last_name:
+        name: last_name
+        description: "Investigator's last name"
+        required: true
+        example: Bloggs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: "Investigator's email address"
+        required: true
+        example: joe.bloggs@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      first_name: Joe
+      middle_initial: A
+      last_name: Bloggs
+      email: joe.bloggs@example.com
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - key
+      - bE8hvaP6DVZf6d5kc4eg1a3
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/investigators/{investigator_id}'
+    metadata:
+      groupName: Investigators
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Retrieve an Investigator'
+      description: 'Retrieve the details of an existing investigator.'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      investigator_id:
+        name: investigator_id
+        description: 'The ID of the investigator.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      investigator_id: 1
+    queryParameters:
+      key:
+        name: key
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_API_KEY}'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      key: '{YOUR_API_KEY}'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: |-
+          {
+              "message": "",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
+              "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
+              "line": 1248,
+              "trace": [
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+                      "line": 45,
+                      "function": "abort",
+                      "class": "Illuminate\\Foundation\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/app/Http/Middleware/RequiresValidApiKey.php",
+                      "line": 21,
+                      "function": "abort"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "App\\Http\\Middleware\\RequiresValidApiKey",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/app/Http/Middleware/DefaultApiHeaders.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "App\\Http\\Middleware\\DefaultApiHeaders",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 159,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 125,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 87,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 805,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 784,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 748,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 737,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 144,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php",
+                      "line": 19,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 99,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 300,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 288,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 91,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 44,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 236,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 163,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 125,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 72,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 50,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 53,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 35,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 211,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Command/Command.php",
+                      "line": 326,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 180,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 1096,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 324,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/symfony/console/Application.php",
+                      "line": 175,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 201,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/welfordj2/sites/bss-tracker/artisan",
+                      "line": 35,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - key
+      - gv5c4hkDZP8da1aVb63ef6E
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/investigators/{investigator_id}'
+    metadata:
+      groupName: Investigators
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update an Investigator'
+      description: 'Update the details of an existing investigator.'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      investigator_id:
+        name: investigator_id
+        description: 'The ID of the investigator.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      investigator_id: 1
+    queryParameters:
+      key:
+        name: key
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_API_KEY}'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      key: '{YOUR_API_KEY}'
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: "Investigator's first name"
+        required: false
+        example: Joe
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      middle_initial:
+        name: middle_initial
+        description: "Investigator's middle initial"
+        required: false
+        example: A
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      last_name:
+        name: last_name
+        description: "Investigator's last name"
+        required: false
+        example: Bloggs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: "Investigator's email address"
+        required: false
+        example: joe.bloggs@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      first_name: Joe
+      middle_initial: A
+      last_name: Bloggs
+      email: joe.bloggs@example.com
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - key
+      - dE43ZcgDfvh5akP6abV18e6
+    controller: null
+    method: null
+    route: null
+    custom: []
